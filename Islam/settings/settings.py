@@ -27,6 +27,10 @@ class settings (qt.QDialog):
         self.sectian.add(_("update"),self.update)
         self.prayerTimes=tabs.PrayerTimes(self)
         self.sectian.add(_("prayertimes"),self.prayerTimes)
+        self.sibha=tabs.Sibha(self)
+        self.sectian.add(_("sibha settings"),self.sibha)
+        self.readQuran=tabs.ReadQuran(self)
+        self.sectian.add(_("read quran"),self.readQuran)
         restoar=tabs.Restoar(self)
         self.sectian.add(_("Backup and restoar"),restoar)
         layout.addWidget(self.ok)
@@ -41,6 +45,11 @@ class settings (qt.QDialog):
         settings_handler.set("g","exitDialog",str(self.layout1.ExitDialog.isChecked()))
         settings_handler.set("update","autoCheck",str(self.update.update_autoDect.isChecked()))
         settings_handler.set("update","beta",str(self.update.update_beta.isChecked()))
+        settings_handler.set("sibha","run",str(self.sibha.run.isChecked()))
+        settings_handler.set("sibha","duration",str(self.sibha.duration.value()))
+        settings_handler.set("sibha","type",str(self.sibha.type.currentIndex()))
+        settings_handler.set("readQuran","run",str(self.readQuran.run.isChecked()))
+        settings_handler.set("readQuran","duration",str(self.readQuran.duration.value()))
         country={}
         for key,value in guiTools.dictionarys.countries.items():
             country[value]=key

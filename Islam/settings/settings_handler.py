@@ -16,6 +16,13 @@ if not os.path.exists(cpath):
 	config.add_section("prayerTimes")
 	config["prayerTimes"]["country"]="EG"
 	config["prayerTimes"]["city"]="cairo"
+	config.add_section("sibha")
+	config["sibha"]["run"]="True"
+	config["sibha"]["duration"]="10"
+	config["sibha"]["type"]="0"
+	config.add_section("readQuran")
+	config["readQuran"]["run"]="True"
+	config["readQuran"]["duration"]="10"
 	with open(cpath, "w",encoding="utf-8") as file:
 		config.write(file)
 

@@ -1,4 +1,6 @@
-import settings
+import random,os,json
+import winsound
+import settings,guiTools
 import datetime
 import aladhan
 import hijri_converter
@@ -12,6 +14,17 @@ class CurrentClock(qt.QWidget):
         self.change()
         layout=qt.QVBoxLayout(self)
         layout.addWidget(self.list)
+        self.sibha=qt2.QTimer(self)
+        self.sibha.timeout.connect(self.sibhaTimer)
+        if settings.settings_handler.get("sibha","run")=="True":
+            i=int(settings.settings_handler.get("sibha","duration"))
+            self.sibha.start(i*60000)
+        self.readQuranTimer=qt2.QTimer(self)
+        self.readQuranTimer.timeout.connect(self.readQuran)
+        if settings.settings_handler.get("readQuran","run")=="True":
+            i=int(settings.settings_handler.get("readQuran","duration"))
+            self.readQuranTimer.start(i*60000)
+        
     def Change(self,key):
         prayersDect={"Fajr":_("Fajr"),"Dhuhr":_("Dhuhr"),"Asr":_("Asr"),"Maghrib":_("Maghrib"),"Isha":_("Isha")}
         try:
@@ -35,3 +48,19 @@ class CurrentClock(qt.QWidget):
         if hijriDate[1].startswith("0"):
             hijriDate[1]=hijriDate[1][1]
         self.list.addItems([_("date : {} {}").format(weekday_names[datetime.datetime.now().weekday()],date),_(" hijri date : {} / {} / {}").format(hijriDate[2],hijriDate[1],hijriDate[0]),_("hijri munth name {}").format(hijri[hijriDate[1]])])
+    def sibhaTimer(self):
+        getType=settings.settings_handler.get("sibha","type")
+        if getType=="0":
+            with open("data/json/azkar.json","r",encoding="utf-8")as json_file:
+                r=random.choice(json.load(json_file)["azkar"])
+            guiTools.send_notification.SendNotification(_("alazkar"),r,50)
+        elif getType=="1":
+            path="data/sounds/sibha"
+            r=random.choice(os.listdir(path))
+            winsound.PlaySound(path + "/" + r,1)
+    def readQuran(self):
+        with open("data/json/quran.json","r",encoding="utf-8-sig") as json_file:
+            content=json.load(json_file)
+        soura=random.choice(list(content.keys()))
+        ayah=random.choice(content[soura]["ayahs"])
+        guiTools.SendNotification(content[soura]["name"],ayah["text"] + str(ayah["numberInSurah"]),30)
