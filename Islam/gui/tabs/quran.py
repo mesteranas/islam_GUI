@@ -6,7 +6,7 @@ class Quran(qt.QWidget):
     def __init__(self,p):
         super().__init__()
         self.brows=qt.QComboBox()
-        self.brows.addItems([_("surahs"),_("pages"),_("juzes"),_("Quarters")])
+        self.brows.addItems([_("surahs"),_("pages"),_("juzes"),_("Quarters"),_("hizbs")])
         self.brows.currentIndexChanged.connect(self.change)
         self.select=qt.QComboBox()
         self.go=qt.QPushButton(_("read quran"))
@@ -27,5 +27,7 @@ class Quran(qt.QWidget):
             self.content=gui.quran.quranJsonControl.getJuz()
         elif index==3:
             self.content=gui.quran.quranJsonControl.getHezb()
+        elif index==4:
+            self.content=gui.quran.quranJsonControl.getHizb()
         self.select.clear()
         self.select.addItems(self.content.keys())
