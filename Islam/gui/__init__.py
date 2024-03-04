@@ -1,1 +1,1 @@
-from . import tabs
+from . import tabs,quran

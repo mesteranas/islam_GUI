@@ -31,6 +31,8 @@ class settings (qt.QDialog):
         self.sectian.add(_("sibha settings"),self.sibha)
         self.readQuran=tabs.ReadQuran(self)
         self.sectian.add(_("read quran"),self.readQuran)
+        self.prayerReminders=tabs.PrayerReminders(self)
+        self.sectian.add(_("prayer reminders"),self.prayerReminders)
         restoar=tabs.Restoar(self)
         self.sectian.add(_("Backup and restoar"),restoar)
         layout.addWidget(self.ok)
@@ -50,6 +52,10 @@ class settings (qt.QDialog):
         settings_handler.set("sibha","type",str(self.sibha.type.currentIndex()))
         settings_handler.set("readQuran","run",str(self.readQuran.run.isChecked()))
         settings_handler.set("readQuran","duration",str(self.readQuran.duration.value()))
+        settings_handler.set("prayerReminders","adaan",str(self.prayerReminders.adaan.isChecked()))
+        settings_handler.set("prayerReminders","beforAdaan",str(self.prayerReminders.beforAdaan.isChecked()))
+        settings_handler.set("prayerReminders","beforDuration",str(self.prayerReminders.beforDuration.value()))
+        settings_handler.set("prayerReminders","adaanVoice",str(self.prayerReminders.adaanVoice.currentText()))
         country={}
         for key,value in guiTools.dictionarys.countries.items():
             country[value]=key

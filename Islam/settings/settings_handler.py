@@ -23,6 +23,11 @@ if not os.path.exists(cpath):
 	config.add_section("readQuran")
 	config["readQuran"]["run"]="True"
 	config["readQuran"]["duration"]="10"
+	config.add_section("prayerReminders")
+	config["prayerReminders"]["adaan"]="True"
+	config["prayerReminders"]["beforAdaan"]="True"
+	config["prayerReminders"]["beforDuration"]="15"
+	config["prayerReminders"]["adaanVoice"]="1.wav"
 	with open(cpath, "w",encoding="utf-8") as file:
 		config.write(file)
 

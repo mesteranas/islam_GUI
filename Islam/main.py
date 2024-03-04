@@ -18,6 +18,7 @@ class main (qt.QMainWindow):
         self.service.setAccessibleName(_("select service"))
         self.service.addTab(gui.tabs.CurrentClock(self),_("current date and prayer"))
         self.service.addTab(gui.tabs.ElectronicSibha(self),_("Electronic sibha"))
+        self.service.addTab(gui.tabs.Quran(self),_("quran"))
         layout.addWidget(self.service)
         self.setting=qt.QPushButton(_("settings"))
         self.setting.setDefault(True)
