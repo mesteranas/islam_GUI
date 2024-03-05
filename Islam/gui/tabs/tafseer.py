@@ -1,3 +1,4 @@
+import os
 import guiTools,gui
 import PyQt6.QtWidgets as qt
 import PyQt6.QtGui as qt1
@@ -17,10 +18,13 @@ class Tafseer(qt.QWidget):
         self.to_ayah=qt.QSpinBox()
         self.change_to(self.to_surah.currentText())
         self.tafseer_book=qt.QComboBox()
-        self.tafseer_book.addItems([_("el-moisr"),_("ibn kathir")])
+        self.tafseer_book.addItems(os.listdir("data/json/tafseer"))
         self.open=qt.QPushButton(_("open"))
         self.open.setDefault(True)
         self.open.clicked.connect(self.on_open)
+        self.download=qt.QPushButton(_("download tafseer"))
+        self.download.setDefault(True)
+        self.download.clicked.connect(lambda:gui.quran.DownloadTafseer(self).exec())
         layout=qt.QFormLayout(self)
         layout.addRow(_("from surah:"),self.from_surah)
         layout.addRow(_("from ayah:"),self.from_ayah)
@@ -28,6 +32,7 @@ class Tafseer(qt.QWidget):
         layout.addRow(_("to ayah:"),self.to_ayah)
         layout.addRow(_("tafseer book"),self.tafseer_book)
         layout.addWidget(self.open)
+        layout.addWidget(self.download)
         self.content=""
     def change_from(self,text):
         self.from_ayah.setRange(1,self.surah[text][1])
@@ -39,8 +44,5 @@ class Tafseer(qt.QWidget):
         to_surah=self.surah[self.to_surah.currentText()][0]
         from_ayah=self.from_ayah.value()
         to_ayah=self.to_ayah.value()
-        if index==0:
-            self.content=gui.quran.tafseerJsonControl.all(from_surah,from_ayah,to_surah,to_ayah,"el-moisr")
-        elif index==1:
-            self.content=gui.quran.tafseerJsonControl.all(from_surah,from_ayah,to_surah,to_ayah,"ibn-kathir")
+        self.content=gui.quran.tafseerJsonControl.all(from_surah,from_ayah,to_surah,to_ayah,self.tafseer_book.currentText())
         guiTools.TextViewer(self,_("tafseer "),self.content).exec()

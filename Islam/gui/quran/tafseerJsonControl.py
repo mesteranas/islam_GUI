@@ -8,7 +8,7 @@ def getSurah():
         surahs[str(value["number"])+value["name"]]=[int(key),value["numberOfAyahs"]]
     return surahs
 def all (from_surah,from_ayah,to_surah,to_ayah,tafseer_file):
-    with open("data/json/tafseer/{}.json".format(tafseer_file),"r",encoding="utf-8-sig") as file:
+    with open("data/json/tafseer/{}".format(tafseer_file),"r",encoding="utf-8-sig") as file:
         data=json.load(file)
     result=[]
     for t in data:
