@@ -37,6 +37,12 @@ class AdvansedQuran (qt.QDialog):
         self.previous_page=qt.QPushButton(_("previous"))
         self.previous_page.clicked.connect(self.on_pageprevious)
         qt1.QShortcut("alt+left",self).activated.connect(self.on_pageprevious)
+        self.gotoayah=qt.QPushButton(_("go to ayah"))
+        self.gotoayah.clicked.connect(self.goToAyah)
+        qt1.QShortcut("ctrl+shift+g",self).activated.connect(self.goToAyah)
+        self.goto=qt.QPushButton(_("Go To"))
+        self.goto.clicked.connect(self.goToPage)
+        qt1.QShortcut("ctrl+g",self).activated.connect(self.goToPage)
         layout=qt.QVBoxLayout(self)
         layout.addWidget(self.currentAyah)
         layout.addWidget(self.tafseer)
@@ -44,7 +50,9 @@ class AdvansedQuran (qt.QDialog):
         layout.addWidget(self.play)
         layout.addWidget(self.next)
         layout.addWidget(self.next_page)
-        layout.addWidget(self.previous)
+        layout.addWidget(self.previous_page)
+        layout.addWidget(self.gotoayah)
+        layout.addWidget(self.goto)
     def on_next(self):
         if self.currentAyahIndex==len(self.ayah)-1:
             self.currentAyahIndex=0
@@ -106,3 +114,17 @@ class AdvansedQuran (qt.QDialog):
     def on_state(self,state):
         if state==QMediaPlayer.MediaStatus.EndOfMedia:
             self.is_playing=False
+    def goToAyah(self):
+        text,ok=qt.QInputDialog.getInt(self,_("go to ayah"),_("type ayah number"),self.currentAyahIndex+1,1,len(self.ayah))
+        if ok:
+            self.currentAyahIndex=text-1
+            self.currentAyah.setText(self.ayah[self.currentAyahIndex])
+            guiTools.speak(self.currentAyah.text())
+    def goToPage(self):
+        text,ok=qt.QInputDialog.getInt(self,_("go to "),_("type number"),self.index+1,1,len(self.content))
+        if ok:
+            self.index=text-1
+            self.ayah=list(self.content)[self.index][1].split("\n")
+            self.currentAyah.setText((self.ayah[0]))
+            self.currentAyahIndex=0
+            guiTools.speak(str(self.index+1))
