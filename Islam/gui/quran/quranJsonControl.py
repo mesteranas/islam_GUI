@@ -7,7 +7,7 @@ def getSurahs():
         ayahs={}
         for ayah in value["ayahs"]:
             ayahs["{} ({})".format(ayah["text"],str(ayah["numberInSurah"]))]=ayah["numberInSurah"]
-        surahs[str(value["number"])+value["name"]]=[key,"\n".join(ayahs)]
+        surahs[str(value["number"])+value["name"]]=[key,"\n".join(ayahs),key]
     return surahs
 def getJuz():
     juz={}
@@ -80,3 +80,10 @@ def getHizb():
         content=juz[j]
         juz[j]=[j,"\n".join(content)]
     return juz
+def getAyah(text):
+    for key,value in data.items():
+        for ayah in value["ayahs"]:
+            t="{} ({})".format(ayah["text"],str(ayah["numberInSurah"]))
+            if t==text:
+                return ayah["numberInSurah"],key,ayah["juz"],ayah["page"]
+    return 1,"1","1","1"

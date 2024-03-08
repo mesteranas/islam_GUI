@@ -1,2 +1,2 @@
-from . import quranJsonControl,tafseerJsonControl
+from . import quranJsonControl,tafseerJsonControl,advansedQuran
 from .downloadTafseer import DownloadTafseer

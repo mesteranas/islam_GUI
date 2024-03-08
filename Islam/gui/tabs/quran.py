@@ -12,10 +12,14 @@ class Quran(qt.QWidget):
         self.go=qt.QPushButton(_("read quran"))
         self.go.setDefault(True)
         self.go.clicked.connect(lambda:guiTools.TextViewer(self,self.select.currentText(),self.content[self.select.currentText()][1]).exec())
+        self.advansed=qt.QPushButton(_("open advansed quran"))
+        self.advansed.setDefault(True)
+        self.advansed.clicked.connect(lambda:gui.quran.advansedQuran.AdvansedQuran(self,self.content[self.select.currentText()],self.content.values(),self.select.currentIndex()).exec())
         layout=qt.QFormLayout(self)
         layout.addRow(_("brows by"),self.brows)
         layout.addRow(_("select"),self.select)
         layout.addWidget(self.go)
+        layout.addWidget(self.advansed)
         self.content=[]
         self.change(self.brows.currentIndex())
     def change(self,index):

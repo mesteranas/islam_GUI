@@ -1,4 +1,4 @@
-import json
+import json,os
 import requests
 import guiTools,gui,settings
 import PyQt6.QtWidgets as qt
@@ -15,18 +15,25 @@ class downloadThread(qt2.QRunnable):
         try:
             r=requests.get("https://raw.githubusercontent.com/mesteranas/{}/main/{}/data/json/tafseer/{}".format(settings.settings_handler.appName,settings.app.appdirname,self.text))
             with open("data/json/tafseer/{}".format(self.text),"w",encoding="utf-8-sig") as data:
-                json.dump(r.json(),data,ensure_ascii=False)
+                json.dump(r.json(),data,ensure_ascii=False,indent=4)
             self.objects.finch.emit(True)
-        except:
+        except Exception as e:
+            print(e)
             self.objects.finch.emit(False)
 class DownloadTafseer(qt.QDialog):
     def __init__(self,p):
         super().__init__(p)
         self.setWindowTitle(_("download tafseer"))
+        List=["al-baghawi.json","al-qurtubi.json","al-saddi.json","al-tabari.json","al-wasit.json","el-moisr.json","ibn-kathir.json","tanwir-al-miqbas.json"]
+        for item in os.listdir("data/json/tafseer"):
+            List.remove(item)
         self.tafseers=qt.QComboBox()
-        self.tafseers.addItems(["al-baghawi.json","al-qurtubi.json","al-saddi.json","al-tabari.json","al-wasit.json","el-moisr.json","ibn-kathir.json","tanwir-al-miqbas.json"])
+        self.tafseers.addItems(List)
         self.download=qt.QPushButton(_("download"))
         self.download.clicked.connect(self.on_download)
+        if list==[]:
+            qt.QMessageBox.warning(self,_("error"),_("all tafseers have been downloaded"))
+            self.download.setDisabled(True)
         layout=qt.QVBoxLayout(self)
         layout.addWidget(self.tafseers)
         layout.addWidget(self.download)
