@@ -1,6 +1,7 @@
 import sys
 from custome_errors import *
 sys.excepthook = my_excepthook
+import keyboard
 import update
 import gui
 import guiTools
@@ -20,7 +21,9 @@ class main (qt.QMainWindow):
         self.service.addTab(gui.tabs.ElectronicSibha(self),_("Electronic sibha"))
         self.service.addTab(gui.tabs.Quran(self),_("quran"))
         self.service.addTab(gui.tabs.Tafseer(self),_("tafseer"))
+        self.service.addTab(gui.tabs.Azkar(self),_("azkar"))
         layout.addWidget(self.service)
+        keyboard.add_hotkey("ctrl+shift+windows+h",self.showOrHide  )
         self.setting=qt.QPushButton(_("settings"))
         self.setting.setDefault(True)
         self.setting.clicked.connect(lambda: settings(self).exec())
@@ -73,7 +76,12 @@ class main (qt.QMainWindow):
                 event.ignore()
         else:
             self.close()
-
+    def showOrHide(self):
+        if self.isVisible():
+            self.hide()
+        else:
+            self.show()
+            self.setFocus()
 App=qt.QApplication([])
 w=main()
 w.show()

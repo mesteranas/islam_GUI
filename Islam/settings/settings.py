@@ -1,4 +1,4 @@
-import guiTools,update
+import guiTools,update,gui
 import zipfile
 import sys
 import os,shutil
@@ -33,6 +33,8 @@ class settings (qt.QDialog):
         self.sectian.add(_("read quran"),self.readQuran)
         self.prayerReminders=tabs.PrayerReminders(self)
         self.sectian.add(_("prayer reminders"),self.prayerReminders)
+        self.quran=tabs.Quran(self)
+        self.sectian.add(_("quran settings "),self.quran)
         restoar=tabs.Restoar(self)
         self.sectian.add(_("Backup and restoar"),restoar)
         layout.addWidget(self.ok)
@@ -56,6 +58,8 @@ class settings (qt.QDialog):
         settings_handler.set("prayerReminders","beforAdaan",str(self.prayerReminders.beforAdaan.isChecked()))
         settings_handler.set("prayerReminders","beforDuration",str(self.prayerReminders.beforDuration.value()))
         settings_handler.set("prayerReminders","adaanVoice",str(self.prayerReminders.adaanVoice.currentText()))
+        settings_handler.set("quran","reciter",self.quran.get())
+        settings_handler.set("quran","tafseer",gui.quran.tafseerJsonControl.getbook(self.quran.tafseer.currentText()))
         country={}
         for key,value in guiTools.dictionarys.countries.items():
             country[value]=key

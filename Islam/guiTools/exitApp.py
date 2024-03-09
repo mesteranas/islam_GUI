@@ -8,12 +8,13 @@ class ExitApp (qt.QDialog):
     def __init__(self,p):
         super().__init__(p)
         self.setWindowTitle(_("exit {} dialog").format(app.name))
+        self.p=p
         self.cancel1=False
         lec=_("what woud you like to do?")
         label=qt.QLabel(lec)
         self.exit=qt.QComboBox()
         self.exit.setAccessibleName(lec)
-        self.exit.addItems([_("exit"),_("restart")])
+        self.exit.addItems([_("hide"),_("exit"),_("restart")])
         self.ok=qt.QPushButton(_("OK"))
         self.ok.clicked.connect(self.fok)
         self.cancel=qt.QPushButton(_("cancel"))
@@ -27,6 +28,9 @@ class ExitApp (qt.QDialog):
     def fok(self):
         ec=self.exit.currentIndex()
         if ec==0:
+            self.p.showOrHide()
+            self.close()
+        elif ec==1:
             sys.exit()
         else:
             os.execl(sys.executable, sys.executable, *sys.argv)

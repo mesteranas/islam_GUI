@@ -1,4 +1,4 @@
-import  json
+import  json,os
 with open("data/json/quran.json","r",encoding="utf-8-sig") as file:
     qdata=json.load(file)
 
@@ -23,3 +23,17 @@ def all (from_surah,from_ayah,to_surah,to_ayah,tafseer_file):
         elif from_surah<int(t["number"]):
             result.append(t["text"])
     return "\n".join(result)
+tafseers={"al-baghawi.json":_("al-baghawi"),"al-qurtubi.json":_("al-qurtubi"),"al-saddi.json":_("al-saddi"),"al-tabari.json":_("al-tabari"),"al-wasit.json":_("al-wasit"),"el-moisr.json":_("el-moisr"),"ibn-kathir.json":_("ibn-kathir"),"tanwir-al-miqbas.json":_("tanwir-al-miqbas")}
+def getTafseers():
+    result=[]
+    for item in os.listdir("data/json/tafseer"):
+        try:
+            result.append(tafseers[item])
+        except:
+            pass
+    return result
+def getbook(text):
+    r={}
+    for key,value in tafseers.items():
+        r[value]=key
+    return r[text]

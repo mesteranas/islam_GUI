@@ -28,6 +28,9 @@ if not os.path.exists(cpath):
 	config["prayerReminders"]["beforAdaan"]="True"
 	config["prayerReminders"]["beforDuration"]="15"
 	config["prayerReminders"]["adaanVoice"]="1.wav"
+	config.add_section("quran")
+	config["quran"]["reciter"]="yasser_aldossary"
+	config["quran"]["tafseer"]="el-moisr.json"
 	with open(cpath, "w",encoding="utf-8") as file:
 		config.write(file)
 

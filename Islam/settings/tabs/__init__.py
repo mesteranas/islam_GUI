@@ -5,3 +5,4 @@ from .prayerTimes import PrayerTimes
 from .sibha import Sibha
 from .readQuran import ReadQuran
 from .prayerReminders import PrayerReminders
+from .quran import Quran

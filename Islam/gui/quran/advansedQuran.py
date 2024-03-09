@@ -7,7 +7,7 @@ from PyQt6.QtMultimedia import QMediaPlayer,QAudioOutput
 class AdvansedQuran (qt.QDialog):
     def __init__(self,p,List,content,index):
         super().__init__(p)
-        self.setWindowTitle(_("advansed quran"))
+        self.setWindowTitle(_("quran"))
         self.is_playing=False
         self.index=index
         self.content=content
@@ -84,7 +84,7 @@ class AdvansedQuran (qt.QDialog):
         return surah+Ayah+".mp3"
     def on_play(self):
         if not self.is_playing:
-            self.media.setSource(qt2.QUrl("https://verse.mp3quran.net/arabic/yasser_aldossary/64/{}".format(self.on_set())))
+            self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
             self.media.play()
             self.is_playing=True
         else:
@@ -92,7 +92,7 @@ class AdvansedQuran (qt.QDialog):
             self.is_playing=False
     def on_tafseer(self):
         Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
-        guiTools.TextViewer(self,_("tafseer"),tafseerJsonControl.all(int(surah),int(Ayah),int(surah),int(Ayah),"el-moisr.json")).exec()
+        guiTools.TextViewer(self,_("tafseer"),tafseerJsonControl.all(int(surah),int(Ayah),int(surah),int(Ayah),settings.settings_handler.get("quran","tafseer"))).exec()
     def on_pagenext(self):
         if self.index==len(self.content)-1:
             self.index=0
