@@ -1,4 +1,4 @@
-from . import quranJsonControl,tafseerJsonControl
+from . import quranJsonControl,tafseerJsonControl,iraab
 import guiTools,gui,settings
 import PyQt6.QtWidgets as qt
 import PyQt6.QtGui as qt1
@@ -43,6 +43,8 @@ class AdvansedQuran (qt.QDialog):
         self.goto=qt.QPushButton(_("Go To"))
         self.goto.clicked.connect(self.goToPage)
         qt1.QShortcut("ctrl+g",self).activated.connect(self.goToPage)
+        self.iraab=qt.QPushButton(_("Grammar "))
+        self.iraab.clicked.connect(self.on_iraab)
         layout=qt.QVBoxLayout(self)
         layout.addWidget(self.currentAyah)
         layout.addWidget(self.tafseer)
@@ -53,6 +55,7 @@ class AdvansedQuran (qt.QDialog):
         layout.addWidget(self.previous_page)
         layout.addWidget(self.gotoayah)
         layout.addWidget(self.goto)
+        layout.addWidget(self.iraab)
     def on_next(self):
         if self.currentAyahIndex==len(self.ayah)-1:
             self.currentAyahIndex=0
@@ -128,3 +131,6 @@ class AdvansedQuran (qt.QDialog):
             self.currentAyah.setText((self.ayah[0]))
             self.currentAyahIndex=0
             guiTools.speak(str(self.index+1))
+    def on_iraab(self):
+        Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
+        guiTools.TextViewer(self,_("Grammar "),iraab.Iraab(surah,int(Ayah)-1)).exec()
