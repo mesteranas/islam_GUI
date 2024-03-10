@@ -9,6 +9,7 @@ class AdvansedQuran (qt.QDialog):
         super().__init__(p)
         self.setWindowTitle(_("quran"))
         self.is_playing=False
+        self.playToEnd=False
         self.index=index
         self.content=content
         self.ayah=List[1].split("\n")
@@ -43,6 +44,9 @@ class AdvansedQuran (qt.QDialog):
         self.goto=qt.QPushButton(_("Go To"))
         self.goto.clicked.connect(self.goToPage)
         qt1.QShortcut("ctrl+g",self).activated.connect(self.goToPage)
+        self.playAll=qt.QPushButton(_("play to the end"))
+        self.playAll.clicked.connect(self.on_play_all)
+        qt1.QShortcut("ctrl+space",self).activated.connect(self.on_play_all)
         self.iraab=qt.QPushButton(_("Grammar "))
         self.iraab.clicked.connect(self.on_iraab)
         layout=qt.QVBoxLayout(self)
@@ -55,6 +59,7 @@ class AdvansedQuran (qt.QDialog):
         layout.addWidget(self.previous_page)
         layout.addWidget(self.gotoayah)
         layout.addWidget(self.goto)
+        layout.addWidget(self.playAll)
         layout.addWidget(self.iraab)
     def on_next(self):
         if self.currentAyahIndex==len(self.ayah)-1:
@@ -93,6 +98,7 @@ class AdvansedQuran (qt.QDialog):
         else:
             self.media.stop()
             self.is_playing=False
+            self.playToEnd=False
     def on_tafseer(self):
         Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
         guiTools.TextViewer(self,_("tafseer"),tafseerJsonControl.all(int(surah),int(Ayah),int(surah),int(Ayah),settings.settings_handler.get("quran","tafseer"))).exec()
@@ -117,6 +123,12 @@ class AdvansedQuran (qt.QDialog):
     def on_state(self,state):
         if state==QMediaPlayer.MediaStatus.EndOfMedia:
             self.is_playing=False
+            if self.playToEnd:
+                self.on_next()
+                if not self.currentAyahIndex==0:
+                    self.on_play_all()
+                else:
+                    self.playToEnd=False
     def goToAyah(self):
         text,ok=qt.QInputDialog.getInt(self,_("go to ayah"),_("type ayah number"),self.currentAyahIndex+1,1,len(self.ayah))
         if ok:
@@ -134,3 +146,13 @@ class AdvansedQuran (qt.QDialog):
     def on_iraab(self):
         Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
         guiTools.TextViewer(self,_("Grammar "),iraab.Iraab(surah,int(Ayah)-1)).exec()
+    def on_play_all(self):
+        if not self.is_playing:
+            self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
+            self.media.play()
+            self.is_playing=True
+            self.playToEnd=True
+        else:
+            self.media.stop()
+            self.is_playing=False
+            self.playToEnd=False

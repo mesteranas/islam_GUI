@@ -22,9 +22,6 @@ class Tafseer(qt.QWidget):
         self.open=qt.QPushButton(_("open"))
         self.open.setDefault(True)
         self.open.clicked.connect(self.on_open)
-        self.download=qt.QPushButton(_("download tafseer"))
-        self.download.setDefault(True)
-        self.download.clicked.connect(lambda:gui.quran.DownloadTafseer(self).exec())
         layout=qt.QFormLayout(self)
         layout.addRow(_("from surah:"),self.from_surah)
         layout.addRow(_("from ayah:"),self.from_ayah)
@@ -32,7 +29,6 @@ class Tafseer(qt.QWidget):
         layout.addRow(_("to ayah:"),self.to_ayah)
         layout.addRow(_("tafseer book"),self.tafseer_book)
         layout.addWidget(self.open)
-        layout.addWidget(self.download)
         self.content=""
     def change_from(self,text):
         self.from_ayah.setRange(1,self.surah[text][1])

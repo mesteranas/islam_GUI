@@ -1,4 +1,6 @@
 import  json,os
+import settings
+settings.language.init_translation()
 with open("data/json/quran.json","r",encoding="utf-8-sig") as file:
     qdata=json.load(file)
 

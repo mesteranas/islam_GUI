@@ -57,7 +57,7 @@ class CurrentClock(qt.QWidget):
         if getType=="0":
             with open("data/json/azkar.json","r",encoding="utf-8")as json_file:
                 r=random.choice(json.load(json_file)["azkar"])
-            guiTools.send_notification.SendNotification(_("alazkar"),r,50)
+            guiTools.speak(_("alazkar") + r)
         elif getType=="1":
             path="data/sounds/sibha"
             r=random.choice(os.listdir(path))
@@ -67,7 +67,7 @@ class CurrentClock(qt.QWidget):
             content=json.load(json_file)
         soura=random.choice(list(content.keys()))
         ayah=random.choice(content[soura]["ayahs"])
-        guiTools.SendNotification(content[soura]["name"],ayah["text"] + str(ayah["numberInSurah"]),30)
+        guiTools.speak(content[soura]["name"] + ayah["text"] + str(ayah["numberInSurah"]))
     def getNextPrayer(self):
         try:
             client=aladhan.Client(aladhan.City(settings.settings_handler.get("prayerTimes","city"),settings.settings_handler.get("prayerTimes","country")))
@@ -106,4 +106,4 @@ class CurrentClock(qt.QWidget):
             self.getPrayer()
         elif self.nextPrayer==time+int(settings.settings_handler.get("prayerReminders","beforDuration"))*60000:
             if settings.settings_handler.get("prayerReminders","beforAdaan")=="True":
-                guiTools.SendNotification("prayer","Prayer approached",10)
+                guiTools.speak("Prayer approached")

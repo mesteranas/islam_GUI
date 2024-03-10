@@ -85,7 +85,6 @@ class main (qt.QMainWindow):
             self.hide()
         else:
             self.show()
-            self.setFocus()
 App=qt.QApplication([])
 w=main()
 w.show()
