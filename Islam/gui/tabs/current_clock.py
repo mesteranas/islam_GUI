@@ -80,7 +80,7 @@ class CurrentClock(qt.QWidget):
                 minute=int(time[1])
                 nowMinute=int(now[1])
                 if hour > NowHour:
-                    return self.Change(adhan.get_en_name()) + _(" at ") +  adhan.readable_timing(show_date=False)
+                    return adhan.readable_timing(show_date=False)
                 if hour==NowHour:
                     if minute>=nowMinute:
                         return self.Change(adhan.get_en_name()) + _(" at ") +  adhan.readable_timing(show_date=False)
@@ -90,8 +90,8 @@ class CurrentClock(qt.QWidget):
         except:
             return _("error")
     def getPrayer(self):
-        text=self.getNextPrayer().split(" at ")
-        time=str(datetime.datetime.strptime(str(text[1]),"%I:%M (%p)").strftime("%H : %M")).split(" : ")
+        text=self.getNextPrayer()
+        time=str(datetime.datetime.strptime(str(text),"%I:%M (%p)").strftime("%H : %M")).split(" : ")
         hour=int(time[0])
         minute=int(time[1])
         return hour*3600000 + minute*60000

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-03-09 20:45+0200\n"
+"POT-Creation-Date: 2024-03-11 01:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,56 +69,60 @@ msgstr ""
 msgid "quran"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:22
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:98
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:23
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:104
 #: D:\programming\projects\python\GUI\Islam\main.py:23
 msgid "tafseer"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:24
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:25
 msgid "previous ayah"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:27
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:28
 msgid "play ayah"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:30
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:31
 msgid "next ayah"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:34
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:35
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:19
 msgid "next"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:37
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:38
 msgid "previous"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:40
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:121
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:41
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:133
 msgid "go to ayah"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:43
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:44
 msgid "Go To"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:46
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:136
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:47
+msgid "play to the end"
+msgstr ""
+
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:50
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:148
 msgid "Grammar "
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:121
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:133
 msgid "type ayah number"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:127
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:139
 msgid "go to "
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:127
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:139
 msgid "type number"
 msgstr ""
 
@@ -140,75 +144,42 @@ msgid "repeat"
 msgstr ""
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:28
-msgid "you read all azkar successfuly"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:28
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:48
 msgid "done"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:26
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:25
-msgid "download tafseer"
+#: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:28
+msgid "you read all azkar successfuly"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:32
-#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:31
-msgid "download"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:35
-msgid "all tafseers have been downloaded"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:35
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:51
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:91
-#: D:\programming\projects\python\GUI\Islam\settings\licence.py:10
-#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:20
-msgid "error"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:48
-msgid "downloaded"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:51
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
-msgid "please try later"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-baghawi"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-qurtubi"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-saddi"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-tabari"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-wasit"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "el-moisr"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "ibn-kathir"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "tanwir-al-miqbas"
 msgstr ""
 
@@ -247,6 +218,17 @@ msgstr ""
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:86
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:89
 msgid " at "
+msgstr ""
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
+msgid "please try later"
+msgstr ""
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:91
+#: D:\programming\projects\python\GUI\Islam\settings\licence.py:10
+#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:20
+msgid "error"
 msgstr ""
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
@@ -378,27 +360,27 @@ msgstr ""
 msgid "brows by"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:29
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:26
 msgid "from surah:"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:30
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:27
 msgid "from ayah:"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:31
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:28
 msgid "to surah"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:32
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:29
 msgid "to ayah:"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:33
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:30
 msgid "tafseer book"
 msgstr ""
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:48
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:44
 msgid "tafseer "
 msgstr ""
 
@@ -815,6 +797,10 @@ msgstr ""
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:28
 msgid "what's new"
+msgstr ""
+
+#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:31
+msgid "download"
 msgstr ""
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:33

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-03-09 20:45+0200\n"
-"PO-Revision-Date: 2024-03-09 21:01+0200\n"
+"POT-Creation-Date: 2024-03-11 01:39+0200\n"
+"PO-Revision-Date: 2024-03-11 02:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -22,423 +22,405 @@ msgstr "الخروج من {} محاورة"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\exitApp.py:13
 msgid "what woud you like to do?"
-msgstr ""
+msgstr "ماذا تريد أن تفعل؟"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\exitApp.py:17
 msgid "exit"
-msgstr ""
+msgstr "خروج"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\exitApp.py:17
 msgid "hide"
-msgstr ""
+msgstr "إخفاء"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\exitApp.py:17
 msgid "restart"
-msgstr ""
+msgstr "إعادة التشغيل"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\exitApp.py:18
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:19
 msgid "OK"
-msgstr ""
+msgstr "موافق"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\exitApp.py:20
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:23
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:91
 #: D:\programming\projects\python\GUI\Islam\update\updater.py:71
 msgid "cancel"
-msgstr ""
+msgstr "إلغاء"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\openLink.py:11
 msgid "Open link dialog"
-msgstr ""
+msgstr "محاورة فتح الرابط"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\openLink.py:12
 #: D:\programming\projects\python\GUI\Islam\guiTools\openLink.py:16
 msgid "link"
-msgstr ""
+msgstr "الرابط"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\openLink.py:17
 msgid "open link "
-msgstr ""
+msgstr "فتح الرابط"
 
 #: D:\programming\projects\python\GUI\Islam\guiTools\openLink.py:19
 msgid "copy link"
-msgstr ""
+msgstr "نسخ الرابط"
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:10
 #: D:\programming\projects\python\GUI\Islam\main.py:22
 msgid "quran"
-msgstr ""
+msgstr "قرآن"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:22
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:98
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:23
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:104
 #: D:\programming\projects\python\GUI\Islam\main.py:23
 msgid "tafseer"
-msgstr ""
+msgstr "تفسير"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:24
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:25
 msgid "previous ayah"
-msgstr ""
+msgstr "الآية السابقة"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:27
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:28
 msgid "play ayah"
-msgstr ""
+msgstr "تشغيل الآية"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:30
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:31
 msgid "next ayah"
-msgstr ""
+msgstr "الآية التالية"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:34
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:35
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:19
 msgid "next"
-msgstr ""
+msgstr "التالي"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:37
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:38
 msgid "previous"
-msgstr ""
+msgstr "السابق"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:40
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:121
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:41
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:133
 msgid "go to ayah"
-msgstr ""
+msgstr "الذهاب إلى آية"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:43
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:44
 msgid "Go To"
-msgstr ""
+msgstr "الذهاب إلى"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:46
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:136
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:47
+msgid "play to the end"
+msgstr "التشغيل إلى النهاية"
+
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:50
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:148
 msgid "Grammar "
-msgstr ""
+msgstr "إعراب"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:121
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:133
 msgid "type ayah number"
-msgstr ""
+msgstr "أكتب رقم الآية"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:127
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:139
 msgid "go to "
-msgstr ""
+msgstr "الذهاب إلى"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:127
+#: D:\programming\projects\python\GUI\Islam\gui\quran\advansedQuran.py:139
 msgid "type number"
-msgstr ""
+msgstr "أكتب الرقم"
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:8
 #: D:\programming\projects\python\GUI\Islam\main.py:24
 msgid "azkar"
-msgstr ""
+msgstr "الأذكار"
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:22
 msgid "zekr"
-msgstr ""
+msgstr "ذِكْر"
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:23
 msgid "information"
-msgstr ""
+msgstr "معلومات"
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:24
 msgid "repeat"
-msgstr ""
+msgstr "التكرار"
+
+#: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:28
+msgid "done"
+msgstr "تم"
 
 #: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:28
 msgid "you read all azkar successfuly"
-msgstr ""
+msgstr "لقد قرأت كل الأذكار بنجاح"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\azkar.py:28
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:48
-msgid "done"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:26
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:25
-msgid "download tafseer"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:32
-#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:31
-msgid "download"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:35
-msgid "all tafseers have been downloaded"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:35
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:51
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:91
-#: D:\programming\projects\python\GUI\Islam\settings\licence.py:10
-#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:20
-msgid "error"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:48
-msgid "downloaded"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\downloadTafseer.py:51
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
-msgid "please try later"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-baghawi"
-msgstr ""
+msgstr "البغوي"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-qurtubi"
-msgstr ""
+msgstr "القرتوبي"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-saddi"
-msgstr ""
+msgstr "السعدي"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-tabari"
-msgstr ""
+msgstr "الطبري"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "al-wasit"
-msgstr ""
+msgstr "الوصيت"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "el-moisr"
-msgstr ""
+msgstr "الميسر"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "ibn-kathir"
-msgstr ""
+msgstr "ابن كثير"
 
-#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:26
+#: D:\programming\projects\python\GUI\Islam\gui\quran\tafseerJsonControl.py:28
 msgid "tanwir-al-miqbas"
-msgstr ""
+msgstr "تنوير المقبس"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\azkar.py:15
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:22
 msgid "open"
-msgstr ""
+msgstr "فتح"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\azkar.py:19
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:20
 msgid "select"
-msgstr ""
+msgstr "أختر"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:33
 msgid "Asr"
-msgstr ""
+msgstr "العصر"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:33
 msgid "Dhuhr"
-msgstr ""
+msgstr "الذهر"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:33
 msgid "Fajr"
-msgstr ""
+msgstr "الفجر"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:33
 msgid "Isha"
-msgstr ""
+msgstr "العشاء"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:33
 msgid "Maghrib"
-msgstr ""
+msgstr "المغرب"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:45
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:83
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:86
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:89
 msgid " at "
-msgstr ""
+msgstr "في"
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
+msgid "please try later"
+msgstr "يرجا المحاولة لاحقا"
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:47
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:91
+#: D:\programming\projects\python\GUI\Islam\settings\licence.py:10
+#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:20
+msgid "error"
+msgstr "خطأ"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Friday"
-msgstr ""
+msgstr "الجمعة"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Monday"
-msgstr ""
+msgstr "الإثنين"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Saturday"
-msgstr ""
+msgstr "السبت"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Sunday"
-msgstr ""
+msgstr "الأحد"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Thursday"
-msgstr ""
+msgstr "الخميس"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Tuesday"
-msgstr ""
+msgstr "الثلاثاء"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:50
 msgid "Wednesday"
-msgstr ""
+msgstr "الأربعاء"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Dhu al-Hijjah"
-msgstr ""
+msgstr "ذو الحجة"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Dhu al-Qi'dah"
-msgstr ""
+msgstr "ذو القعدة"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Jumada al-awwal"
-msgstr ""
+msgstr "جماد الأول"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Jumada al-thani"
-msgstr ""
+msgstr "جماد الثاني"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Muharram"
-msgstr ""
+msgstr "محرم"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Rabi' al-awwal"
-msgstr ""
+msgstr "ربيع الأول"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Rabi' al-thani"
-msgstr ""
+msgstr "ربيع الثاني"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Rajab"
-msgstr ""
+msgstr "رجب"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Ramadan"
-msgstr ""
+msgstr "رمضان"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Safar"
-msgstr ""
+msgstr "سفر"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Sha'ban"
-msgstr ""
+msgstr "شعبان"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:51
 msgid "Shawwal"
-msgstr ""
+msgstr "شوال"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:54
 msgid " hijri date : {}  {}  {}"
-msgstr ""
+msgstr "التاريخ الهجري: {} {} {}"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:54
 msgid "date : {} {}"
-msgstr ""
+msgstr "التاريخ: {} {}"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\current_clock.py:60
 msgid "alazkar"
-msgstr ""
+msgstr "الأذكار"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\electronicSibha.py:11
 msgid "+"
-msgstr ""
+msgstr "زائد"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\electronicSibha.py:15
 msgid "reset"
-msgstr ""
+msgstr "إعادة ضبط"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:9
 msgid "Quarters"
-msgstr ""
+msgstr "الأرباع"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:9
 msgid "hizbs"
-msgstr ""
+msgstr "الأحزاب"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:9
 msgid "juzes"
-msgstr ""
+msgstr "الأجزاء"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:9
 msgid "pages"
-msgstr ""
+msgstr "الصفحات"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:9
 msgid "surahs"
-msgstr ""
+msgstr "السور"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:12
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:33
 msgid "read quran"
-msgstr ""
+msgstr "قراأت القرآن"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:15
 msgid "open quran by advansed way"
-msgstr ""
+msgstr "فتح القرآن بطريقة متقدمة"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\quran.py:19
 msgid "brows by"
-msgstr ""
+msgstr "التصفح بواسطة"
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:26
+msgid "from surah:"
+msgstr "من السورة:"
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:27
+msgid "from ayah:"
+msgstr "من الآية:"
+
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:28
+msgid "to surah"
+msgstr "إلى السورة:"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:29
-msgid "from surah:"
-msgstr ""
+msgid "to ayah:"
+msgstr "إلى الآية:"
 
 #: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:30
-msgid "from ayah:"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:31
-msgid "to surah"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:32
-msgid "to ayah:"
-msgstr ""
-
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:33
 msgid "tafseer book"
-msgstr ""
+msgstr "كتاب التفسير"
 
-#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:48
+#: D:\programming\projects\python\GUI\Islam\gui\tabs\tafseer.py:44
 msgid "tafseer "
-msgstr ""
+msgstr "تفسير"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:16
 msgid "version : "
-msgstr ""
+msgstr "الإصدار :"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:19
 msgid "select service"
-msgstr ""
+msgstr "إختر خدمة"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:20
 msgid "current date and prayer"
-msgstr ""
+msgstr "التاريخ الحالي والصلاة"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:21
 msgid "Electronic sibha"
-msgstr ""
+msgstr "المسبحة الالكترونية"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:27
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:15
 msgid "settings"
-msgstr ""
+msgstr "الإعدادات"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:36
 msgid "help"
-msgstr ""
+msgstr "مساعدة"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:37
 msgid "help file"
-msgstr ""
+msgstr "ملف المساعدة"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:41
 msgid "contact us"
-msgstr ""
+msgstr "تواصل معنا"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:45
 msgid "telegram channel"
-msgstr ""
+msgstr "قناة ال telegram"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:48
 msgid "Github"
@@ -450,79 +432,79 @@ msgstr ""
 
 #: D:\programming\projects\python\GUI\Islam\main.py:54
 msgid "email"
-msgstr ""
+msgstr "البريد الالكتروني"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:57
 msgid "visite project on Github"
-msgstr ""
+msgstr "زيار المشروع على github"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:60
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\update.py:22
 msgid "check for update"
-msgstr ""
+msgstr "البحث عن التحديثات"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:63
 #: D:\programming\projects\python\GUI\Islam\settings\licence.py:8
 msgid "license"
-msgstr ""
+msgstr "الترخيص"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:66
 msgid "donate"
-msgstr ""
+msgstr "تبرع"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:69
 #: D:\programming\projects\python\GUI\Islam\main.py:71
 msgid "about"
-msgstr ""
+msgstr "حول"
 
 #: D:\programming\projects\python\GUI\Islam\main.py:71
 msgid "{} version: {} description: {} developer: {}"
-msgstr ""
+msgstr "{} الإصدار: {} الوصف: {} المطور: {}"
 
 #: D:\programming\projects\python\GUI\Islam\settings\licence.py:10
 msgid "server error"
-msgstr ""
+msgstr "خطأ في الخادم"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:17
 msgid "select sectian"
-msgstr ""
+msgstr "إختر قسم"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:21
 msgid "default"
-msgstr ""
+msgstr "إفتراضي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:26
 msgid "general"
-msgstr ""
+msgstr "عام"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:27
 msgid "update"
-msgstr ""
+msgstr "التحديث"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:29
 msgid "prayertimes"
-msgstr ""
+msgstr "مواقيت الصلاة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:31
 msgid "sibha settings"
-msgstr ""
+msgstr "إعدادات المسبحة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:35
 msgid "prayer reminders"
-msgstr ""
+msgstr "تنبيهات الصلاة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:37
 msgid "quran settings "
-msgstr ""
+msgstr "إعدادات القرآن"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:39
 msgid "Backup and restoar"
-msgstr ""
+msgstr "النسخ الإحتياطي والإستعادة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:70
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\backupAndRestoart.py:39
 msgid "settings updated"
-msgstr ""
+msgstr "تم تحديث الإعدادات"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:71
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\backupAndRestoart.py:40
@@ -530,304 +512,312 @@ msgid ""
 "you must restart the program to apply changes \n"
 " do you want to restart now?"
 msgstr ""
+"يجب عليك إعادة تشغيل البرنامج لتطبيق التغييرات \\n\n"
+" هل تريد إعادة التشغيل الآن؟"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:73
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\backupAndRestoart.py:42
 msgid "restart now"
-msgstr ""
+msgstr "إعادة التشغيل الآن"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:75
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\backupAndRestoart.py:44
 msgid "restart later"
-msgstr ""
+msgstr "إعادة التشغيل لاحقا"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:86
 msgid "alert"
-msgstr ""
+msgstr "تنبيه"
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:87
 msgid ""
 "do you wanna reset your settings ? \n"
 " if you click reset , the program will restart to complete reset."
 msgstr ""
+"هل تريد إعادة ضبط إعداداتك؟ \\ن\n"
+" إذا قمت بالنقر فوق إعادة تعيين، فسيتم إعادة تشغيل البرنامج لإكمال إعادة التعيين."
 
 #: D:\programming\projects\python\GUI\Islam\settings\settings.py:89
 msgid "reset and restart"
-msgstr ""
+msgstr "إعادة تعيين وإعادة التشغيل"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\backupAndRestoart.py:16
 msgid "backup"
-msgstr ""
+msgstr "النسخ الإحتياطي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\backupAndRestoart.py:19
 msgid "restoar"
-msgstr ""
+msgstr "إستعادة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\genral.py:15
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\genral.py:17
 msgid "language"
-msgstr ""
+msgstr "اللغة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\genral.py:24
 msgid "Show exit dialog when exiting the program"
-msgstr ""
+msgstr "إظهار محاورة الخروج عند الخروج من البرنامج"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\prayerReminders.py:15
 msgid "run adaan"
-msgstr ""
+msgstr "تشغيل التنبيه بالأذان"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\prayerReminders.py:17
 msgid "get reminder befor adaan"
-msgstr ""
+msgstr "الحصول على تنبيه قبل الأذان"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\prayerReminders.py:28
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\readQuran.py:22
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\sibha.py:25
 msgid "duration using minutes"
-msgstr ""
+msgstr "المدة بالدقائق"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\prayerReminders.py:29
 msgid "select adaan voice"
-msgstr ""
+msgstr "إختر صوت الأذان"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\prayerTimes.py:21
 msgid "country"
-msgstr ""
+msgstr "الدولة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\prayerTimes.py:22
 msgid "city"
-msgstr ""
+msgstr "المدينة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:13
 msgid "Ibrahim Al-Akhdar"
-msgstr ""
+msgstr "إبراهيم الأخضر"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:14
 msgid "Shaik Abu Baker Al-Shatri"
-msgstr ""
+msgstr "أبو بكر الشاطري"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:15
 msgid "Ahmed Al-Ajmy"
-msgstr ""
+msgstr "أحمد العجمي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:16
 msgid "Ahmed Neana"
-msgstr ""
+msgstr "أحمد نعينع"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:17
 msgid "Akram Al-Alaqmy"
-msgstr ""
+msgstr "أكرم الالقمي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:18
 msgid "Warsh"
-msgstr ""
+msgstr "ورش"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:19
 msgid "Khalid Al-Qahtani"
-msgstr ""
+msgstr "خالد القطامي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:20
 msgid "Khalefa Al-Tunaiji"
-msgstr ""
+msgstr "خليفة التنيجي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:21
 msgid "Saud Al-Shuraim"
-msgstr ""
+msgstr "سعود الشريم"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:22
 msgid "Sahl Yassin"
-msgstr ""
+msgstr "ساهل ياسين"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:23
 msgid "Salah Albudair"
-msgstr ""
+msgstr "صلاح البدير"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:24
 msgid "Salaah Bukhatir"
-msgstr ""
+msgstr "صلاح  بخطر"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:25
 msgid "Data"
-msgstr ""
+msgstr "البيانات"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:26
 msgid "Abdulbasit Abdulsamad Mujawwad"
-msgstr ""
+msgstr "عبد الباسط عبد السمض مجود"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:27
 msgid "Abdurrahmaan Al-Sudais"
-msgstr ""
+msgstr "عبد الرحمن السديس"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:28
 msgid "Abdullah Al-Matroud"
-msgstr ""
+msgstr "عبد الله  المطرود"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:29
 msgid "Abdullah Basfar"
-msgstr ""
+msgstr "عبد الله بصفر"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:30
 msgid "Abdullaah Al-Johani"
-msgstr ""
+msgstr "عبد الله الجوهاني"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:31
 msgid "Abdulmohsin Al-Qasim"
-msgstr ""
+msgstr "عبد المحسن  القصيم"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:32
 msgid "Ali Al-Huthaify"
-msgstr ""
+msgstr "علي الحذيفي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:33
 msgid "Ali Jaber"
-msgstr ""
+msgstr "علي جابر"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:34
 msgid "Ali Hajjaj"
-msgstr ""
+msgstr "علي هجاج"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:35
 msgid "Fares Abbad"
-msgstr ""
+msgstr "فارس عباد"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:36
 msgid "Nasser Al-Qatami"
-msgstr ""
+msgstr "ناصر القطامي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:37
 msgid "Hani Al-Rifai"
-msgstr ""
+msgstr "هاني الرفاعي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:38
 msgid "Yasser Aldossary"
-msgstr ""
+msgstr "ياسر الدوسري"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:39
 msgid "Maher Al-Muaiqly"
-msgstr ""
+msgstr "ماهر المعيقلي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:40
 msgid "Mohammad Al-Tablaway"
-msgstr ""
+msgstr "محمد الطبلاوي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:41
 msgid "Mohammad Ayyoub"
-msgstr ""
+msgstr "محمد أيوب"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:42
 msgid "Mohammad Jibreel"
-msgstr ""
+msgstr "محمد جبريل"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:43
 msgid "Mohammad Al-Minshawi"
-msgstr ""
+msgstr "محمد المنشاوي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:44
 msgid "Mohammad Al-Minshawi Mujawwad"
-msgstr ""
+msgstr "محمد المنشاوي مجود"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:45
 msgid "Mohammad Abdulkarim"
-msgstr ""
+msgstr "محمد عبد الكريم"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:46
 msgid "Mahmood Al-Husary"
-msgstr ""
+msgstr "محمود خليل الحصري"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:47
 msgid "Mahmood Al-Husary Mujawwad"
-msgstr ""
+msgstr "محمود خليل الحصري مجود"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:48
 msgid "Mahmoud Ali Albanna"
-msgstr ""
+msgstr "محمود علي البنة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:49
 msgid "Mishary Al-Afasy"
-msgstr ""
+msgstr "مشاري العفاسي"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:50
 msgid "Yaser Salamah"
-msgstr ""
+msgstr "ياسر سلامة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:51
 msgid "Mahmood Al-Husary Muallim"
-msgstr ""
+msgstr "محمود خليل الحصري المصحف المعلم"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:65
 msgid "select reciter"
-msgstr ""
+msgstr "إختر قارئ"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\quran.py:66
 msgid "select tafseer"
-msgstr ""
+msgstr "إختر تفسير"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\readQuran.py:15
 msgid "run send random Ayah"
-msgstr ""
+msgstr "تشغيل إرسال آية عشوائية"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\sibha.py:15
 msgid "run sibha"
-msgstr ""
+msgstr "تشغيل المسبحة"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\sibha.py:21
 msgid "notification message"
-msgstr ""
+msgstr "إشعار"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\sibha.py:21
 msgid "sound"
-msgstr ""
+msgstr "صوت"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\sibha.py:26
 msgid "type"
-msgstr ""
+msgstr "النوع"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\update.py:16
 msgid "Automatically check for update when program start"
-msgstr ""
+msgstr "التحقق تلقائيًا من التحديث عند بدء تشغيل البرنامج"
 
 #: D:\programming\projects\python\GUI\Islam\settings\tabs\update.py:19
 msgid "download beta updates"
-msgstr ""
+msgstr "تحميل التحديثات التجريبية"
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:14
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:18
 msgid "info"
-msgstr ""
+msgstr "معلومة"
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:14
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:18
 msgid "no updates fownd"
-msgstr ""
+msgstr "لا يوجد تحديثات"
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:20
 msgid "server error please try later"
-msgstr ""
+msgstr "خطأ في الهادم يرجى المحاولة لاحقا"
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:25
 msgid "new {} version {}"
-msgstr ""
+msgstr "جديد {} إصدار {}"
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:28
 msgid "what's new"
-msgstr ""
+msgstr "ما الجديد"
+
+#: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:31
+msgid "download"
+msgstr "تحميل"
 
 #: D:\programming\projects\python\GUI\Islam\update\checkForUpdate.py:33
 msgid "close"
-msgstr ""
+msgstr "إغلاق"
 
 #: D:\programming\projects\python\GUI\Islam\update\updater.py:62
 msgid "updating"
-msgstr ""
+msgstr "جاري التحديث"
 
 #: D:\programming\projects\python\GUI\Islam\update\updater.py:64
 msgid "downloading update please wait"
-msgstr ""
+msgstr "جاري تحميل التحديث يرجى الانتظار ..."
 
 #: D:\programming\projects\python\GUI\Islam\update\updater.py:68
 msgid "download state"
-msgstr ""
+msgstr "حالة التحميل"
 
 #: D:\programming\projects\python\GUI\Islam\update\updater.py:82
 msgid "installing"
-msgstr ""
+msgstr "جاري التثبيت"
