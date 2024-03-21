@@ -1,2 +1,2 @@
-from . import quranJsonControl,tafseerJsonControl,advansedQuran
+from . import quranJsonControl,tafseerJsonControl,advansedQuran,iraab
 from .azkar import Azkar

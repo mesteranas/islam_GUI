@@ -7,8 +7,8 @@ class Azkar(qt.QWidget):
     def __init__(self,p):
         super().__init__()
         self.dict={
-            "azkar el-masaa":"azkar-masaa.json",
-            "azkar el-sabah":"azkar-sabah.json"
+            _("azkar el-masaa"):"azkar-masaa.json",
+            _("azkar el-sabah"):"azkar-sabah.json"
         }
         self.select=qt.QComboBox()
         self.select.addItems(self.dict.keys())

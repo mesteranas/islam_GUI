@@ -17,9 +17,12 @@ class Tafseer(qt.QWidget):
         self.to_surah.currentTextChanged.connect(self.change_to)
         self.to_ayah=qt.QSpinBox()
         self.change_to(self.to_surah.currentText())
+        self.irab=qt.QPushButton(_("Grammar "))
+        self.irab.setDefault(True)
+        self.irab.clicked.connect(self.on_irab)
         self.tafseer_book=qt.QComboBox()
         self.tafseer_book.addItems(gui.quran.tafseerJsonControl.getTafseers())
-        self.open=qt.QPushButton(_("open"))
+        self.open=qt.QPushButton(_("tafseer"))
         self.open.setDefault(True)
         self.open.clicked.connect(self.on_open)
         layout=qt.QFormLayout(self)
@@ -27,6 +30,7 @@ class Tafseer(qt.QWidget):
         layout.addRow(_("from ayah:"),self.from_ayah)
         layout.addRow(_("to surah"),self.to_surah)
         layout.addRow(_("to ayah:"),self.to_ayah)
+        layout.addWidget(self.irab)
         layout.addRow(_("tafseer book"),self.tafseer_book)
         layout.addWidget(self.open)
         self.content=""
@@ -42,3 +46,10 @@ class Tafseer(qt.QWidget):
         to_ayah=self.to_ayah.value()
         self.content=gui.quran.tafseerJsonControl.all(from_surah,from_ayah,to_surah,to_ayah,gui.quran.tafseerJsonControl.getbook(self.tafseer_book.currentText()))
         guiTools.TextViewer(self,_("tafseer "),self.content).exec()
+    def on_irab(self):
+        from_surah=self.surah[self.from_surah.currentText()][0]
+        to_surah=self.surah[self.to_surah.currentText()][0]
+        from_ayah=self.from_ayah.value()
+        to_ayah=self.to_ayah.value()
+        self.content=gui.quran.iraab.get(int(from_surah),int(from_ayah),int(to_surah),int(to_ayah))
+        guiTools.TextViewer(self,_("grammar"),self.content).exec()

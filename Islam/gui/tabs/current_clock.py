@@ -57,7 +57,7 @@ class CurrentClock(qt.QWidget):
         if getType=="0":
             with open("data/json/azkar.json","r",encoding="utf-8")as json_file:
                 r=random.choice(json.load(json_file)["azkar"])
-            guiTools.speak(_("alazkar") + r)
+            guiTools.SendNotification(_("alazkar"),r)
         elif getType=="1":
             path="data/sounds/sibha"
             r=random.choice(os.listdir(path))
@@ -67,7 +67,7 @@ class CurrentClock(qt.QWidget):
             content=json.load(json_file)
         soura=random.choice(list(content.keys()))
         ayah=random.choice(content[soura]["ayahs"])
-        guiTools.speak(content[soura]["name"] + ayah["text"] + str(ayah["numberInSurah"]))
+        guiTools.SendNotification(content[soura]["name"],ayah["text"] + str(ayah["numberInSurah"]))
     def getNextPrayer(self):
         try:
             client=aladhan.Client(aladhan.City(settings.settings_handler.get("prayerTimes","city"),settings.settings_handler.get("prayerTimes","country")))
@@ -83,10 +83,10 @@ class CurrentClock(qt.QWidget):
                     return adhan.readable_timing(show_date=False)
                 if hour==NowHour:
                     if minute>=nowMinute:
-                        return self.Change(adhan.get_en_name()) + _(" at ") +  adhan.readable_timing(show_date=False)
+                        return  adhan.readable_timing(show_date=False)
                     else:
                         continue
-            return self.Change(adhans[0].get_en_name()) + _(" at ") +  adhans[0].readable_timing(show_date=False)
+            return  adhans[0].readable_timing(show_date=False)
         except:
             return _("error")
     def getPrayer(self):
@@ -106,4 +106,4 @@ class CurrentClock(qt.QWidget):
             self.getPrayer()
         elif self.nextPrayer==time+int(settings.settings_handler.get("prayerReminders","beforDuration"))*60000:
             if settings.settings_handler.get("prayerReminders","beforAdaan")=="True":
-                guiTools.speak("Prayer approached")
+                guiTools.SendNotification(_("prayer"),_("Prayer approached"))

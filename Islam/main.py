@@ -20,7 +20,7 @@ class main (qt.QMainWindow):
         self.service.addTab(gui.tabs.CurrentClock(self),_("current date and prayer"))
         self.service.addTab(gui.tabs.ElectronicSibha(self),_("Electronic sibha"))
         self.service.addTab(gui.tabs.Quran(self),_("quran"))
-        self.service.addTab(gui.tabs.Tafseer(self),_("tafseer"))
+        self.service.addTab(gui.tabs.Tafseer(self),_("tafseer and grammar"))
         self.service.addTab(gui.tabs.Azkar(self),_("azkar"))
         layout.addWidget(self.service)
         keyboard.add_hotkey("ctrl+shift+windows+h",self.showOrHide  )
