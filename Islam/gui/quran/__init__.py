@@ -2,3 +2,4 @@ from . import quranJsonControl,tafseerJsonControl,advansedQuran,iraab,translatio
 from .azkar import Azkar
 from .downloadTafseer import DownloadTafseer
 from .downloadMore import DownloadMore
+from .downloadTranslations import DownloadTranslations
