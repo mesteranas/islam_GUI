@@ -31,6 +31,7 @@ if not os.path.exists(cpath):
 	config.add_section("quran")
 	config["quran"]["reciter"]="yasser_aldossary"
 	config["quran"]["tafseer"]="el-moisr.json"
+	config["quran"]["translation"]="english.json"
 	with open(cpath, "w",encoding="utf-8") as file:
 		config.write(file)
 

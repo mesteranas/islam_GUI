@@ -1,4 +1,4 @@
-from . import quranJsonControl,tafseerJsonControl,iraab
+from . import quranJsonControl,tafseerJsonControl,iraab,translation
 import guiTools,gui,settings
 import PyQt6.QtWidgets as qt
 import PyQt6.QtGui as qt1
@@ -49,6 +49,8 @@ class AdvansedQuran (qt.QDialog):
         qt1.QShortcut("ctrl+space",self).activated.connect(self.on_play_all)
         self.iraab=qt.QPushButton(_("Grammar "))
         self.iraab.clicked.connect(self.on_iraab)
+        self.translation=qt.QPushButton(_("translation"))
+        self.translation.clicked.connect(self.on_translation)
         layout=qt.QVBoxLayout(self)
         layout.addWidget(self.currentAyah)
         layout.addWidget(self.tafseer)
@@ -61,6 +63,7 @@ class AdvansedQuran (qt.QDialog):
         layout.addWidget(self.goto)
         layout.addWidget(self.playAll)
         layout.addWidget(self.iraab)
+        layout.addWidget(self.translation)
     def on_next(self):
         if self.currentAyahIndex==len(self.ayah)-1:
             self.currentAyahIndex=0
@@ -156,3 +159,6 @@ class AdvansedQuran (qt.QDialog):
             self.media.stop()
             self.is_playing=False
             self.playToEnd=False
+    def on_translation(self):
+        Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
+        guiTools.TextViewer(self,_("translation"),translation.translation(surah,int(Ayah))).exec()

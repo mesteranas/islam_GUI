@@ -59,11 +59,18 @@ class Quran(qt.QWidget):
         self.reciter.addItems(translations.values())
         self.tafseer=qt.QComboBox()
         self.tafseer.addItems(gui.quran.tafseerJsonControl.getTafseers())
+        self.trans=qt.QComboBox()
+        self.trans.addItems(gui.quran.translation.getdict())
         self.reciter.setCurrentText(translations[settings_handler.get("quran","reciter")])
         self.tafseer.setCurrentText(gui.quran.tafseerJsonControl.tafseers[settings_handler.get("quran","tafseer")])
+        transD={}
+        for key,value in gui.quran.translation.getdict().items():
+            transD[value]=key
+        self.trans.setCurrentText(transD[settings_handler.get("quran","translation")])
         layout=qt.QFormLayout(self)
         layout.addRow(_("select reciter"),self.reciter)
         layout.addRow(_("select tafseer"),self.tafseer)
+        layout.addRow(_("select translation"),self.trans)
     def get(self):
         d={}
         for key,value in translations.items():

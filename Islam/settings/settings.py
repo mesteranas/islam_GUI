@@ -60,6 +60,7 @@ class settings (qt.QDialog):
         settings_handler.set("prayerReminders","adaanVoice",str(self.prayerReminders.adaanVoice.currentText()))
         settings_handler.set("quran","reciter",self.quran.get())
         settings_handler.set("quran","tafseer",gui.quran.tafseerJsonControl.getbook(self.quran.tafseer.currentText()))
+        settings_handler.set("quran","translation",gui.quran.translation.getdict()[self.quran.trans.currentText()])
         country={}
         for key,value in guiTools.dictionarys.countries.items():
             country[value]=key
