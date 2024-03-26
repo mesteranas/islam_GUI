@@ -87,3 +87,24 @@ def getAyah(text):
             if t==text:
                 return ayah["numberInSurah"],key,ayah["juz"],ayah["page"]
     return 1,"1","1","1"
+def getQuran(from_surah,from_ayah,to_surah,to_ayah):
+    result=[]
+    for Surah,value in data.items():
+        if from_surah==int(Surah):
+            for Ayah in value["ayahs"]:
+                if from_ayah<=int(Ayah["numberInSurah"]):
+                    result.append(Ayah["text"])
+            if to_surah==int(Surah):
+                if to_ayah==int(Ayah["numberInSurah"]):
+                    break
+                elif from_ayah<int(Ayah["numberInSurah"]):
+                    result.append(Ayah["text"])
+            elif from_surah<int(Surah):
+                result.append(Ayah["text"])
+    return result
+def searchinquran(keyword,ayah_list):
+    result=[]
+    for ayah in ayah_list:
+        if keyword in ayah:
+            result.append(ayah)
+    return result

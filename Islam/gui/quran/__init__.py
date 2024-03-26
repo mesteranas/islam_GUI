@@ -3,3 +3,4 @@ from .azkar import Azkar
 from .downloadTafseer import DownloadTafseer
 from .downloadMore import DownloadMore
 from .downloadTranslations import DownloadTranslations
+from .search import Search

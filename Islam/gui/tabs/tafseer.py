@@ -1,3 +1,4 @@
+
 import os
 import guiTools,gui
 import PyQt6.QtWidgets as qt
@@ -30,6 +31,9 @@ class Tafseer(qt.QWidget):
         self.translation=qt.QPushButton(_("translation"))
         self.translation.setDefault(True)
         self.translation.clicked.connect(self.on_translation)
+        self.search=qt.QPushButton(_("quran searcher"))
+        self.search.setDefault(True)
+        self.search.clicked.connect(self.on_search)
         layout=qt.QFormLayout(self)
         layout.addRow(_("from surah:"),self.from_surah)
         layout.addRow(_("from ayah:"),self.from_ayah)
@@ -40,6 +44,7 @@ class Tafseer(qt.QWidget):
         layout.addWidget(self.open)
         layout.addRow(_("select translation"),self.translationFiles)
         layout.addWidget(self.translation)
+        layout.addWidget(self.search)
         self.content=""
     def change_from(self,text):
         self.from_ayah.setRange(1,self.surah[text][1])
@@ -67,3 +72,10 @@ class Tafseer(qt.QWidget):
         to_ayah=self.to_ayah.value()
         self.content=gui.quran.translation.get(int(from_surah),int(from_ayah),int(to_surah),int(to_ayah),gui.quran.translation.getdict()[self.translationFiles.currentText()])
         guiTools.TextViewer(self,_("translation"),self.content).exec()
+    def on_search(self):
+        from_surah=self.surah[self.from_surah.currentText()][0]
+        to_surah=self.surah[self.to_surah.currentText()][0]
+        from_ayah=self.from_ayah.value()
+        to_ayah=self.to_ayah.value()
+        gui.quran.Search(self,int(from_surah),int(from_ayah),int(to_surah),int(to_ayah)).exec()
+

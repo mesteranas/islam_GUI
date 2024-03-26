@@ -51,6 +51,8 @@ class AdvansedQuran (qt.QDialog):
         self.iraab.clicked.connect(self.on_iraab)
         self.translation=qt.QPushButton(_("translation"))
         self.translation.clicked.connect(self.on_translation)
+        self.ayahinfo=qt.QPushButton(_("get information for current ayah"))
+        self.ayahinfo.clicked.connect(self.on_info)
         layout=qt.QVBoxLayout(self)
         layout.addWidget(self.currentAyah)
         layout.addWidget(self.tafseer)
@@ -64,6 +66,7 @@ class AdvansedQuran (qt.QDialog):
         layout.addWidget(self.playAll)
         layout.addWidget(self.iraab)
         layout.addWidget(self.translation)
+        layout.addWidget(self.ayahinfo)
     def on_next(self):
         if self.currentAyahIndex==len(self.ayah)-1:
             self.currentAyahIndex=0
@@ -162,3 +165,14 @@ class AdvansedQuran (qt.QDialog):
     def on_translation(self):
         Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
         guiTools.TextViewer(self,_("translation"),translation.translation(surah,int(Ayah))).exec()
+    def on_info(self):
+        ayah,surah,juz,page,hizb,sajda=getAyah(self.currentAyah.text())
+        qt.QMessageBox.information(self,_("info"),_("ayah {} surah {} juz {} page {} quarter {} sajda: {}".format(ayah,surah,juz,page,hizb,sajda)))
+
+def getAyah(text):
+    for key,value in quranJsonControl.data.items():
+        for ayah in value["ayahs"]:
+            t="{} ({})".format(ayah["text"],str(ayah["numberInSurah"]))
+            if t==text:
+                return str(ayah["numberInSurah"]),str(key + value["name"]),str(ayah["juz"]),str(ayah["page"]),str(ayah["hizbQuarter"]),str(ayah["sajda"])
+    return "1","1","1","1","1","False"
