@@ -24,7 +24,7 @@ class DownloadTafseer(qt.QDialog):
         super().__init__(p)
         self.setWindowTitle(_("download tafseer"))
         self.tafseers=qt.QComboBox()
-        self.tafseers.addItems(["al-baghawi.json","al-qurtubi.json","al-saddi.json","al-tabari.json","al-wasit.json","el-moisr.json","ibn-kathir.json","tanwir-al-miqbas.json"])
+        self.tafseers.addItems(self.on_get())
         self.download=qt.QPushButton(_("download"))
         self.download.clicked.connect(self.on_download)
         layout=qt.QVBoxLayout(self)
@@ -43,3 +43,6 @@ class DownloadTafseer(qt.QDialog):
         else:
             qt.QMessageBox.information(self,_("error"),_("please try later"))
             self.close()
+    def on_get(self):
+        r=requests.get("https://raw.githubusercontent.com/mesteranas/{}/main/{}/data/json/files/all_tafseers.json".format(settings.settings_handler.appName,settings.app.appdirname))
+        return r.json()

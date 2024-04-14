@@ -1,5 +1,6 @@
 import os
 import json
+import requests
 import settings
 def  translation(Surah,Ayah):
     with open("data/json/translation/" + settings.settings_handler.get("quran","translation"),"r",encoding="utf-8-sig")as data:
@@ -45,3 +46,6 @@ def getdict():
         except:
             pass
     return result
+def on_get(self):
+    r=requests.get("https://raw.githubusercontent.com/mesteranas/{}/main/{}/data/json/files/all_translations.json".format(settings.settings_handler.appName,settings.app.appdirname))
+    return r.json()

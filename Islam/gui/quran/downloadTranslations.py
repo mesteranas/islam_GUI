@@ -24,7 +24,7 @@ class DownloadTranslations(qt.QDialog):
         super().__init__(p)
         self.setWindowTitle(_("download  translation"))
         self.tafseers=qt.QComboBox()
-        self.tafseers.addItems(gui.quran.translation.translationDict)
+        self.tafseers.addItems(gui.quran.translation.on_get(None))
         self.download=qt.QPushButton(_("download"))
         self.download.clicked.connect(self.on_download)
         layout=qt.QVBoxLayout(self)
