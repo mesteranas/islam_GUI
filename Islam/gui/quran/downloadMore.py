@@ -1,5 +1,6 @@
 from .downloadTafseer import DownloadTafseer
 from .downloadTranslations import DownloadTranslations
+from .downloadReciter import DownloadReciter
 import PyQt6.QtWidgets as qt
 import PyQt6.QtGui as qt1
 import PyQt6.QtCore as qt2
@@ -12,5 +13,8 @@ class DownloadMore(qt.QDialog):
         self.translation=qt.QPushButton(_("translation"))
         self.translation.clicked.connect(lambda:DownloadTranslations(self).exec())
         layout=qt.QVBoxLayout(self)
+        self.reciter=qt.QPushButton(_("current reciter"))
+        self.reciter.clicked.connect(lambda:DownloadReciter(self).exec())
+        layout.addWidget(self.reciter)
         layout.addWidget(self.tafseer)
         layout.addWidget(self.translation)

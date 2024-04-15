@@ -1,3 +1,4 @@
+import os
 from . import quranJsonControl,tafseerJsonControl,iraab,translation
 import guiTools,gui,settings
 import PyQt6.QtWidgets as qt
@@ -17,6 +18,8 @@ class AdvansedQuran (qt.QDialog):
         self.audio=QAudioOutput()
         self.media.setAudioOutput(self.audio)
         self.media.mediaStatusChanged.connect(self.on_state)
+        self.media.setSource(qt2.QUrl.fromLocalFile("data/sounds/001001.mp3"))
+        self.media.play()
         self.showFullScreen()
         self.currentAyahIndex=0
         self.tafseer=qt.QPushButton(_("tafseer"))
@@ -73,6 +76,9 @@ class AdvansedQuran (qt.QDialog):
             self.currentAyahIndex+=1
         self.currentAyah.setText(self.ayah[self.currentAyahIndex])
         guiTools.speak(self.currentAyah.text())
+        if self.media.isPlaying():
+            self.media.stop()
+            self.on_play()
     def on_previous(self):
         if self.currentAyahIndex==0:
             self.currentAyahIndex=len(self.ayah)-1
@@ -80,6 +86,9 @@ class AdvansedQuran (qt.QDialog):
             self.currentAyahIndex-=1
         self.currentAyah.setText(self.ayah[self.currentAyahIndex])
         guiTools.speak(self.currentAyah.text())
+        if self.media.isPlaying():
+            self.media.stop()
+            self.on_play()
     def on_set(self):
         Ayah,surah,juz,page=quranJsonControl.getAyah(self.currentAyah.text())
         if int(surah)<10:
@@ -97,7 +106,10 @@ class AdvansedQuran (qt.QDialog):
         return surah+Ayah+".mp3"
     def on_play(self):
         if not self.media.isPlaying():
-            self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
+            if os.path.exists("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set()):
+                self.media.setSource(qt2.QUrl.fromLocalFile("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set()))
+            else:
+                self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
             self.media.play()
         else:
             self.media.stop()
@@ -150,7 +162,11 @@ class AdvansedQuran (qt.QDialog):
         guiTools.TextViewer(self,_("Grammar "),iraab.Iraab(surah,int(Ayah)-1)).exec()
     def on_play_all(self):
         if not self.media.isPlaying():
-            self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
+            if os.path.exists("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set()):
+                self.media.setSource(qt2.QUrl.fromLocalFile("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set()))
+            else:
+                self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
+
             self.media.play()
             self.playToEnd=True
         else:
