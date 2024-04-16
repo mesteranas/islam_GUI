@@ -1,7 +1,7 @@
 {
 "name": "Islam",
-"version": 1.0,
-"what is new": "None",
-"download": "None",
+"version": 2.0,
+"what is new": "added quran translations\nadded quran searcher\nadded get ayah information\ndeleted most of tafseers\nadded download tafseers ,translations and current reciter\nbug fixes",
+"download": "https://github.com/mesteranas/islam_GUI/releases/download/v2.0/islamSetup.exe",
 "is_beta": false
 }
