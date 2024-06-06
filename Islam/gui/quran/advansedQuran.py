@@ -107,9 +107,11 @@ class AdvansedQuran (qt.QDialog):
     def on_play(self):
         if not self.media.isPlaying():
             if os.path.exists("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set()):
-                self.media.setSource(qt2.QUrl.fromLocalFile("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set()))
+                path=qt2.QUrl.fromLocalFile("data/reciters/" + settings.settings_handler.get("quran","reciter") + "/" + self.on_set())
             else:
-                self.media.setSource(qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set()))
+                path=qt2.QUrl(settings.tabs.quran.quranDict[settings.settings_handler.get("quran","reciter")] + self.on_set())
+            if not self.media.source()==path:
+                self.media.setSource(path)
             self.media.play()
         else:
             self.media.stop()
