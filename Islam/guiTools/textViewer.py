@@ -3,6 +3,7 @@ class TextViewer(qt.QDialog):
     def __init__(self,p,title,text):
         super().__init__(p)
         self.setWindowTitle(title)
+        self.showFullScreen()
         self.text=qt.QTextEdit()
         self.text.setText(text)
         self.text.setReadOnly(True)

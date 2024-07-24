@@ -17,7 +17,10 @@ class main (qt.QMainWindow):
         layout=qt.QVBoxLayout()
         self.service=qt.QTabWidget()
         self.service.setAccessibleName(_("select service"))
-        self.service.addTab(gui.tabs.CurrentClock(self),_("current date and prayer"))
+        try:
+            self.service.addTab(gui.tabs.CurrentClock(self),_("current date and prayer"))
+        except:
+            pass
         self.service.addTab(gui.tabs.ElectronicSibha(self),_("Electronic sibha"))
         self.service.addTab(gui.tabs.Quran(self),_("quran"))
         self.service.addTab(gui.tabs.Tafseer(self),_("tafseer , translation and grammar"))
