@@ -118,7 +118,10 @@ class AdvansedQuran (qt.QDialog):
     def on_state(self,state):
         if state==QMediaPlayer.MediaStatus.EndOfMedia:
             if self.playToEnd:
-                self.currentAyah.setCurrentRow(self.currentAyah.currentIndex().row()+1)
+                if self.currentAyah.currentIndex().row()+1==len(self.ayah):
+                    self.currentAyah.setCurrentRow(0)
+                else:
+                    self.currentAyah.setCurrentRow(self.currentAyah.currentIndex().row()+1)
                 if not self.currentAyah.currentIndex()==0:
                     self.on_play_all()
                 else:
